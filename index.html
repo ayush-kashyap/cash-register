@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cash Register</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/5f1318dd38.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <header>
+        <h1>Cash Register</h1>
+    </header>
+    <section>
+        <div class="container">
+            <label for="bill">Bill Amount</label>
+            <input type="number" name="Bill" id="bill" placeholder="Enter the bill Amount">
+            <button class="btn go">Go  <i class="fa fa-arrow-right"></i></button>
+            <label for="cash" class="cashlabel">Cash Amount</label>
+            <input type="number" name="Cash" id="cash" placeholder="Enter the cash Amount">
+            <button class="btn change">Calculate Change  <i class="fa fa-arrow-right"></i></button>
+        </div>
+        <div class="second">
+            <div class="table">
+                <button class="table-close" type="reset"><i class="fa fa-times"></i></button>
+                <table>
+                <tr>
+                    <th>
+                        Notes
+                    </th>
+                    <th>
+                        No. of Notes
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        2000
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        500
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        200
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        100
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        50
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        20
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        10
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        5
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        1
+                    </th>
+                    <td class="notesCount">
+                        0
+                    </td>
+                </tr>
+            </table></div>
+            <img src="loading.svg" alt="">
+        </div>
+    </section>
+    <div class="footer">Made By Ayush</div>
+    <script src="app.js"></script>
+</body>
+</html>

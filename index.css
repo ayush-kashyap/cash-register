@@ -1,0 +1,110 @@
+body{
+    margin: 0;
+}
+:root{
+    --main-color:rgb(186, 255, 212);
+    --primary-color:rgba(215, 255, 232, 0.568);
+}
+*{
+    font-family: "Philosopher";
+}
+h1{
+    margin-left: 2rem;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1rem;
+    height: 85vh;
+}
+.container{
+    height: 250px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+input{
+    max-width: 250px;
+    padding: 0.7rem 1rem;
+    font-size: 1.1rem;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: var(--main-color);
+    font-weight: 550;
+    font-style: italic;
+}
+#cash, .cashlabel, .change{
+    display: none;
+    animation: inanime 300ms linear;
+}
+@keyframes inanime{
+    from{
+        transform: translateX(-400px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+td, th{
+    text-align: left;
+    padding: 0.5rem 2rem;
+}
+tr:nth-child(1){
+    background-color: var(--main-color);
+}
+tr:nth-child(2n + 3){
+    background-color: var(--primary-color);
+}
+table{
+    border-collapse: collapse;
+}
+.table-close{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.8rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.second{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.table{
+    display: none;
+    position: absolute;
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0px 0px 15px var(--primary-color), 0px 0px 5px rgba(0, 0, 0, 0.123);
+    transition: transform linear 1000ms;
+}
+img{
+    display: none;
+    height: 100px;
+}
+.footer{
+    position: fixed;
+    bottom: -1.5rem;
+    right: -5.5rem;
+    text-align: center;
+    padding: 1rem 5rem 5rem 5rem;
+    background-color: var(--main-color);
+    transform: rotate(-45deg);
+}
+@media only screen and (max-width: 550px){
+    section{
+        flex-direction: column;
+    }
+}
