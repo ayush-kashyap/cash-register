@@ -18,6 +18,7 @@ nextBtn.addEventListener('click', () => {
             cashAmt.style.display=" block";
             getChange.style.display=" block";
             cashLabel.style.display=" block";
+            cashAmt.focus();
         }
 });
 getChange.addEventListener('click', () => {
