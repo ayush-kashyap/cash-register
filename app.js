@@ -1,5 +1,7 @@
 const closeTable = document.querySelector(".table-close");
 const nextBtn = document.querySelector(".go");
+const amtReturn = document.querySelector(".rtnamt");
+const resetBtn = document.querySelector(".reset");
 const loadImg = document.querySelector("img");
 var billAmt = document.querySelector("#bill");
 var cashAmt = document.querySelector("#cash");
@@ -31,6 +33,7 @@ getChange.addEventListener('click', () => {
         console.log(cash, bill);
     }else{
         let returnAmt = cash - bill;
+        amtReturn.innerText=returnAmt;
         for(let i =0; i < notesAvailable.length; i++){
             notesCount[i].innerText = Math.trunc(returnAmt / notesAvailable[i]);
             returnAmt %= notesAvailable[i]; 
@@ -42,7 +45,9 @@ getChange.addEventListener('click', () => {
         }, 1500);
     }
 });
-closeTable.addEventListener('click', ()=>{
+closeTable.addEventListener('click', reset);
+resetBtn.addEventListener('click', reset);
+function reset(){
     table.style.display="none";
     nextBtn.style.display="block";
     cashAmt.style.display=" none";
@@ -50,4 +55,5 @@ closeTable.addEventListener('click', ()=>{
     cashLabel.style.display=" none";
     cashAmt.value="";
     billAmt.value="";
-});
+    billAmt.focus();
+}

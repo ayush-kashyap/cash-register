@@ -3,7 +3,10 @@ body{
 }
 :root{
     --main-color:rgb(186, 255, 212);
-    --primary-color:rgba(215, 255, 232, 0.568);
+    --primary-color:rgba(189, 189, 189, 0.168);
+}
+*:focus{
+    outline: none;
 }
 *{
     font-family: "Philosopher";
@@ -30,10 +33,16 @@ input{
     max-width: 250px;
     padding: 0.7rem 1rem;
     font-size: 1.1rem;
+    border: none;
+    border-bottom: 2px solid black;
+}
+input::-webkit-inner-spin-button{
+    display: none;
 }
 .btn{
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    cursor: pointer;
     border: none;
     font-size: 1.1rem;
     background-color: var(--main-color);
@@ -75,6 +84,7 @@ table{
     border: none;
 }
 .second{
+    height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -96,12 +106,25 @@ img{
 }
 .footer{
     position: fixed;
-    bottom: -1.5rem;
-    right: -5.5rem;
+    bottom: -1.8rem;
+    right: -6.5rem;
+    box-shadow: -1px 0px 5px rgba(0, 0, 0, 0.288);
     text-align: center;
     padding: 1rem 5rem 5rem 5rem;
     background-color: var(--main-color);
     transform: rotate(-45deg);
+}
+.return{
+    margin-bottom: 2rem;
+}
+.reset{
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 @media only screen and (max-width: 550px){
     section{
